@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ char operator;
+ double n1,n2,n3;
+ scanf("%c",&operator);
+ scanf("%lf%lf",&n1,&n2);
+ switch(operator)
+ {
+case '+':printf("%.2lf + %.2lf = %.2lf",n1,n2,(n1+n2));
+break;
+case '-':printf("%.2lf - %.2lf = %.2lf",n1,n2,(n1-n2));
+break;
+case '*':printf("%.2lf * %.2lf = %.2lf",n1,n2,(n1*n2));
+break;
+case '/':if(n2!=0)
+printf("%.2lf / %.2lf = %.2lf",n1,n2,(n1/n2));
+else
+printf("Can't divide with zero");
+break;
+case 's':n3=sin(n1);
+printf("sin %.0lf = %.2lf",n1,n3);
+break;
+case 'c':n3=cos(n1);
+printf("cos %.0lf = %.2lf",n1,n3);
+break;
+case 't':n3=tan(n1);
+printf("tan %.0lf = %.2lf",n1,n3);
+break;
+case 'p':n3=n1*n1;
+printf("Square of %.2lf = %.2lf",n1,n3);
+break;
+case ‘r’:n3=sqrt(n1);
+printf(“Square Root of %.2lf = %.2lf”,n1,n3);
+break;
+default:
+printf(“Invalid Operator”);
+ }
+return 0;
+}
